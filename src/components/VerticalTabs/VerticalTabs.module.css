@@ -1,0 +1,41 @@
+
+.verticalTabsContainer {
+    display: flex;
+    width:100%;
+    height:25%;
+    /* max-height:190px; */
+    align-items: center;
+    justify-content: space-between;
+    background-color: white; 
+  }
+  
+  .tabs {
+    display: flex;
+    flex-direction: column;
+    gap:1vh;
+    padding-left: 3vw;
+  }
+  
+  .tab {
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right:15px;
+    border-radius: 30px;
+    width: max-content;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .tab:hover {
+    background: linear-gradient(238.59deg, #d0e7ff 4.35%, #e6f2ff 110.31%, #f2f8ff 110.31%);
+    transform: translateX(5px);
+  }
+  
+  .tab.active {
+    background: linear-gradient(238.59deg, #336de9 4.35%, #769df2 110.31%, #bbbaeb 110.31%);
+    color: white;
+    font-weight: bold;
+  }
+  

@@ -1,0 +1,17 @@
+.maindiv{
+    display:flex;
+    flex-direction: column;
+}
+.dashboardcontainer{
+    display: flex;
+    flex-direction: row;
+    height:92.22vh;
+    
+}
+.sidebarcall{
+    width:18%;
+}
+.containercall{
+    width:82%;
+    background-color: #F1F1F1;
+}

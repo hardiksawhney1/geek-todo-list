@@ -1,0 +1,138 @@
+.tablenavbar{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    align-items: center;
+    padding-left:2vw;
+    padding-right:2vw;
+}
+.HorizontaltabsContainer {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    background-color: white; 
+    gap:3vw;
+  }
+  
+  /* .tabsHorizontal {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .tabHorizontal {
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right:15px;
+    border-radius: 30px;
+
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  }
+  
+  .tabHorizontal:hover {
+    background: linear-gradient(238.59deg, #d0e7ff 4.35%, #e6f2ff 110.31%, #f2f8ff 110.31%);
+    transform: translateY(-1px);
+  }
+  
+  .tabHorizontal.active {
+    background: linear-gradient(238.59deg, #336de9 4.35%, #769df2 110.31%, #bbbaeb 110.31%);
+    color: white;
+    font-weight: bold;
+  } */
+
+  .tabsHorizontal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:0.4vw;
+    padding:0.5vw;
+    border-radius:15px;
+    border: 1px solid #F1F1F1
+  }
+  
+  .tabHorizontal {
+    cursor: pointer;
+    font-size: 1vw;
+    font-weight: 600;
+    padding: 0.5vw;
+    padding-left:0.7vw;
+    padding-right:0.7vw;
+    width: auto;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 15px;
+    
+  }
+  
+  .tabHorizontal.active:hover {
+    background: linear-gradient(238.59deg, #d0e7ff 4.35%, #e6f2ff 110.31%, #f2f8ff 110.31%);
+    color:black;
+    transform: translateY(0px);
+  }
+  
+  .tabHorizontal:hover {
+    background: linear-gradient(238.59deg, #d0e7ff 4.35%, #e6f2ff 110.31%, #f2f8ff 110.31%);
+    transform: translateY(-5px);
+  }
+  .tabHorizontal.active {
+    background: linear-gradient(238.59deg, #336de9 4.35%, #769df2 110.31%, #bbbaeb 110.31%);
+    color: white;
+    font-weight: bold;
+  }
+  .tabHorizontal.active .tabTitle{
+    border-bottom: 3px solid #5F8FE3;
+  }
+  .filterbutton{
+    padding:1vw;
+    border-radius:15px;
+    border: 1px solid #F1F1F1
+  }
+
+/* Tasktable.module.css */
+
+/* Align table heading text to center */
+
+
+
+  .checkboxContainer {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .checkboxInput {
+    display: none;
+  }
+  
+  .checkboxCustom {
+    width: 1.5rem; /* 6 * 0.25rem */
+    height: 1.5rem;
+    border-radius: 9999px; /* Full rounding to make it circular */
+    border: 2px solid #d1d5db; /* Tailwind gray-300 */
+    position: relative;
+  }
+  
+  .checkboxCustom::before {
+    content: '';
+    display: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/></svg>');
+    mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" clip-rule="evenodd"/></svg>');
+  }
+  
+  .checkboxInput:checked ~ .checkboxCustom {
+    background-color: #38a169; /* Tailwind green-500 */
+    border-color: #38a169; /* Tailwind green-500 */
+  }
+  
+  .checkboxInput:checked ~ .checkboxCustom::before {
+    display: block;
+  }
+  

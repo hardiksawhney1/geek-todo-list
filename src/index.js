@@ -1,0 +1,31 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { FirebaseProvider } from './context/Firebase';
+import { BrowserRouter } from 'react-router-dom';
+import './index.css';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { CategoryProvider } from './context/CategoryContext';
+import { TaskProvider } from './context/TaskContext';
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <FirebaseProvider>
+      <TaskProvider>
+        <CategoryProvider>
+          
+            <App />
+          
+        </CategoryProvider>
+        </TaskProvider>
+      </FirebaseProvider>
+    </BrowserRouter>
+  </React.StrictMode>
+);
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
